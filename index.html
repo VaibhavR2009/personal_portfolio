@@ -3,117 +3,246 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vaibhav Ramji | Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <title>Vaibhav Ramji | Student Developer & Robotics Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="custom-cursor-dot"></div>
     <div class="custom-cursor-ring"></div>
 
-    <nav class="navbar">
-        <div class="logo-group">
-            <div class="logo">VR<span>.</span></div>
-        </div>
-        <ul class="nav-links">
-            <li class="nav-item active" data-target="home">HOME</li>
-            <li class="nav-item" data-target="education">EDUCATION</li>
-            <li class="nav-item" data-target="achievements">ACHIEVEMENTS</li>
-            <li class="nav-item" data-target="service">SERVICE</li>
-            <li class="nav-item" data-target="projects">PROJECTS</li>
-            <li class="nav-item" data-target="summer-journal">MY JOURNEY</li>
-        </ul>
-    </nav>
+    <div id="toast-notification" class="toast-notification">Copied to clipboard!</div>
+
+    <header class="navbar-wrapper">
+        <nav class="navbar">
+            <div class="logo-group">
+                <a href="#home" class="logo" data-nav="home">VR<span>.</span></a>
+                <span class="logo-tag">Voorhees '27</span>
+            </div>
+            <ul class="nav-links">
+                <li class="nav-item active" data-target="home">Home</li>
+                <li class="nav-item" data-target="education">Education</li>
+                <li class="nav-item" data-target="achievements">Honors</li>
+                <li class="nav-item" data-target="service">Community</li>
+                <li class="nav-item" data-target="projects">Projects</li>
+                <li class="nav-item" data-target="summer-journal">Build Logs</li>
+            </ul>
+        </nav>
+    </header>
 
     <main class="content-container">
 
+        <!-- ================= HOME SECTION ================= -->
         <section id="home" class="page-panel active">
             <div class="hero-section">
                 
                 <div class="profile-card-block">
                     <div class="avatar-frame">
-                        <img id="dynamic-avatar" src="PXL_20260101_213935258.ACTION_PAN-01.COVER.jpg" alt="Vaibhav Ramji">
+                        <img id="dynamic-avatar" src="profile.jpg" alt="Vaibhav Ramji">
+                        <div class="avatar-status-pill">Open to STEM Collabs</div>
                     </div>
                     <div class="profile-meta-content">
                         <h2 id="dynamic-name">Vaibhav Ramji</h2>
+                        <p class="profile-role">High School Senior · Voorhees High & Hunterdon Academies</p>
                         <div class="social-brutalist-row">
-                            <a href="https://github.com" id="dynamic-github" target="_blank" class="badge-link btn-blue">GitHub</a>
-                            <a href="https://linkedin.com" id="dynamic-linkedin" target="_blank" class="badge-link btn-yellow">LinkedIn</a>
+                            <a href="https://github.com/VaibhavR2009" id="dynamic-github" target="_blank" rel="noopener noreferrer" class="badge-link btn-blue">GitHub ↗</a>
+                            <a href="https://www.linkedin.com/in/vaibhav-ramji-729527396/" id="dynamic-linkedin" target="_blank" rel="noopener noreferrer" class="badge-link btn-yellow">LinkedIn ↗</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="hero-text">
-                    <span class="badge-running">ROBOTICS & ELECTRICAL ENGINEERING</span>
-                    <h1 class="hero-main-title">Vaibhav Ramji</h1>
+                    <h1 class="hero-main-title">Hey, I'm Vaibhav.</h1>
                     <p class="bio">
-                        An innovative student developer driving toward a future in electrical engineering and robotics. I love working with automation as well as computing the solution for real-world issues. It isn't difficult to not dislike me :)
+                        I'm a high school senior passionate about robotics, embedded hardware, and agentic AI. I believe in peeling back layers of abstraction to build real solutions with my own hands—whether that's 3D-printing a motorized face-tracking monitor arm with carbon-fiber PETG, coding autonomous pathfinding for NASA satellites, or developing AI agents that help makers design hardware. When I'm not in the workshop, you'll find me on the tennis court, leading our school Video Club, or mentoring younger students.
                     </p>
+                    
+                    <div class="quick-highlights-row">
+                        <span class="mini-highlight-pill">Sunflower Robotic Arm</span>
+                        <span class="mini-highlight-pill">NASA Zero Robotics 1st Place</span>
+                        <span class="mini-highlight-pill">Google & Kaggle AI Badge</span>
+                        <span class="mini-highlight-pill">Techthought.org Intern Lead</span>
+                    </div>
+
+                    <!-- Technical Skills Strip -->
+                    <div class="skills-section">
+                        <span class="skills-label">Core Technical Stack:</span>
+                        <div class="skills-strip">
+                            <span class="skill-chip">Agentic AI</span>
+                            <span class="skill-chip">C++</span>
+                            <span class="skill-chip">Python</span>
+                            <span class="skill-chip">FreeCAD & 3D Printing (PETG-CF)</span>
+                            <span class="skill-chip">Arduino & Raspberry Pi</span>
+                            <span class="skill-chip">Computer Vision (MediaPipe)</span>
+                            <span class="skill-chip">Linux & VMs</span>
+                            <span class="skill-chip">Cybersecurity</span>
+                            <span class="skill-chip">Java</span>
+                            <span class="skill-chip">HTML/CSS</span>
+                        </div>
+                    </div>
+
                     <div class="contact-strip">
-                        <a href="mailto:vaibhav.ramji09@gmail.com" class="contact-link">vaibhav.ramji09@gmail.com</a>
-                        <span class="divider">|</span>
-                        <a href="tel:925-247-1121" class="contact-link">925-247-1121</a>
+                        <div class="contact-item" id="copy-email-btn" title="Click to copy email">
+                            <span class="contact-val">vaibhav.ramji09@gmail.com</span>
+                            <span class="copy-hint">Copy</span>
+                        </div>
+                        <span class="divider">/</span>
+                        <div class="contact-item" id="copy-phone-btn" title="Click to copy phone">
+                            <span class="contact-val">925-247-1121</span>
+                            <span class="copy-hint">Copy</span>
+                        </div>
+                        <span class="divider">/</span>
+                        <div class="contact-item static-loc">
+                            <span class="contact-val">Whitehouse Station, NJ</span>
+                        </div>
                     </div>
                 </div>
 
+                <!-- Bento Highlights -->
                 <div class="bento-grid">
                     <div class="bento-card featured">
-                        <div>
-                            <span class="card-label">Flagship Program</span>
-                            <h3>MIT & NASA Zero Robotics Champion</h3>
+                        <div class="bento-top">
+                            <span class="card-label featured-label">Senior Capstone Project</span>
+                            <span class="bento-year">2026–2027</span>
                         </div>
-                        <p>1st Place Nationally. Programmed micro-satellite parameters executed live inside the International Space Station framework.</p>
+                        <h3>Sunflower: Robotic Face-Tracking Monitor Arm</h3>
+                        <p>Engineered an autonomous face-tracking robotic monitor arm. Custom-modeled in FreeCAD with hollow wiring channels and 3D printed with carbon-fiber PETG on a Bambu Lab A1 using a hardened steel nozzle. Solved the MediaPipe Z-depth perspective jitter issue by creating a deadband margin filter and center-of-face tracking algorithm, driving motors with an Arduino.</p>
+                        <div class="card-tag-row">
+                            <span class="tech-tag">FreeCAD</span>
+                            <span class="tech-tag">PETG-CF Composite</span>
+                            <span class="tech-tag">Google MediaPipe</span>
+                            <span class="tech-tag">Arduino Motor Control</span>
+                            <span class="tech-tag">Kinematics & PID</span>
+                        </div>
                     </div>
+
                     <div class="bento-card">
-                        <div>
-                            <span class="card-label">Academic Achievement</span>
-                            <h3>Cyber Security</h3>
+                        <div class="bento-top">
+                            <span class="card-label">National Champion</span>
+                            <span class="bento-year">2025</span>
                         </div>
-                        <p>8th Place New Jersey FBLA Regional Standings.</p>
+                        <h3>MIT & NASA Zero Robotics Champion</h3>
+                        <p>Won 1st place nationwide! Programmed autonomous C++ navigation algorithms deployed live on Astrobee free-flying micro-satellites aboard the International Space Station with NASA astronaut Dr. Don Pettit.</p>
+                        <div class="card-tag-row">
+                            <span class="tech-tag">C++</span>
+                            <span class="tech-tag">Autonomous Systems</span>
+                            <span class="tech-tag">NASA ISS Astrobee</span>
+                        </div>
                     </div>
+
                     <div class="bento-card">
-                        <div>
-                            <span class="card-label">Leadership</span>
-                            <h3>Video Club President</h3>
+                        <div class="bento-top">
+                            <span class="card-label">Google & Kaggle Capstone</span>
+                            <span class="bento-year">2026</span>
                         </div>
-                        <p>Institutional Video Production excellence distinction award recipient.</p>
+                        <h3>DIY Partfinder: Agentic AI Recommender</h3>
+                        <p>Built an Agentic AI for DIY makers that reasons through mechanical constraints (weight, torque) and electrical factors (voltage, current, motor compatibility) to generate component lists, specs, buy links, and build steps. Published on GitHub with an interactive demo.</p>
+                        <div class="card-tag-row">
+                            <span class="tech-tag">Agentic AI</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Gemini API</span>
+                            <span class="tech-tag">Google & Kaggle Intensive</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- ================= EDUCATION SECTION ================= -->
         <section id="education" class="page-panel">
-            <h2 class="page-title">Education</h2>
-            <p class="section-subtitle">Academic foundations and technical specialization pathways.</p>
+            <div class="section-title-wrap">
+                <span class="section-eyebrow">Academics</span>
+                <h2 class="page-title">Education & Coursework</h2>
+                <p class="section-subtitle">Specialized academy curriculum, honors, and academic coursework.</p>
+            </div>
+            
             <div class="education-layout">
                 <div class="institution-card">
                     <div class="inst-meta">
-                        <h3>Voorhees High School</h3>
-                        <span class="year-pill">2023 - 2027</span>
+                        <div>
+                            <span class="school-type-pill">Specialized Academy</span>
+                            <h3>Voorhees High School</h3>
+                        </div>
+                        <span class="year-pill">Class of 2027 (Senior)</span>
                     </div>
-                    <p class="location-text">Glen Gardner, NJ</p>
-                    <p class="academy-text">Varsity Computer Science and Applied Engineering Academy</p>
-                    <p style="margin-bottom: 15px;"><strong>PSAT 11 score:</strong> 1440</p>
+                    <p class="location-text">Glen Gardner / Whitehouse Station, NJ</p>
+                    <p class="academy-text">Admitted to the <strong>Varsity Computer Science and Applied Engineering Academy</strong> (Hunterdon County Academies) — a competitive 4-year specialized engineering curriculum in hardware prototyping, algorithms, design thinking, and systems integration.</p>
+                    
+                    <div class="stats-grid-row">
+                        <div class="stats-callout-card">
+                            <div class="stat-number">95.73</div>
+                            <div class="stat-info">
+                                <strong>Cumulative GPA</strong>
+                                <span>Out of 100 · Rigorous AP/Honors STEM</span>
+                            </div>
+                        </div>
+
+                        <div class="stats-callout-card">
+                            <div class="stat-number">1440</div>
+                            <div class="stat-info">
+                                <strong>PSAT 11 Score</strong>
+                                <span>Commended Scholar · 99th Percentile</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="honors-group-title">Honor Societies & Scholar Recognitions</div>
                     <div class="honors-row">
-                        <span class="h-tag">National Honor Society</span>
+                        <span class="h-tag">National Honor Society (Vice President)</span>
                         <span class="h-tag">National Technical Honor Society</span>
-                        <span class="h-tag">AP Scholar</span>
+                        <span class="h-tag">AP Scholar with Honor</span>
                         <span class="h-tag">NSHSS Member</span>
                     </div>
                 </div>
 
                 <div class="curriculum-box">
-                    <div class="discipline-group">
-                        <h4>Advanced STEM Coursework</h4>
-                        <p>AP Physics C, AP Calculus BC, AP Calculus AB, AP Computer Science A, AP Computer Science Principles, Honors Cybersecurity, AP Computer Science Capstone, AP Chemistry, AP Biology, AP Statistics, Honors Physics</p>
+                    <h3 class="curriculum-main-title">Rigorous STEM Coursework</h3>
+                    <p class="curriculum-intro">Focusing on advanced physical sciences, university-level mathematics, and engineering:</p>
+                    
+                    <div class="course-category">
+                        <div class="course-cat-title">Computer Science & Engineering</div>
+                        <div class="course-pills">
+                            <span class="course-pill">CS & Applied Engineering Acad. I, II, III, IV</span>
+                            <span class="course-pill">Engineering / CAD I</span>
+                            <span class="course-pill">AP Computer Science A</span>
+                            <span class="course-pill">AP Computer Science Principles</span>
+                            <span class="course-pill">Honors Cybersecurity</span>
+                        </div>
+                    </div>
+
+                    <div class="course-category">
+                        <div class="course-cat-title">Advanced Mathematics</div>
+                        <div class="course-pills">
+                            <span class="course-pill">AP Calculus BC</span>
+                            <span class="course-pill">AP Calculus AB</span>
+                            <span class="course-pill">AP Statistics</span>
+                            <span class="course-pill">Pre-Calculus Honors</span>
+                        </div>
+                    </div>
+
+                    <div class="course-category">
+                        <div class="course-cat-title">Physics & Physical Sciences</div>
+                        <div class="course-pills">
+                            <span class="course-pill">AP Physics C: Mechanics</span>
+                            <span class="course-pill">Physics Honors</span>
+                            <span class="course-pill">AP Chemistry</span>
+                            <span class="course-pill">AP Biology</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- ================= ACHIEVEMENTS SECTION ================= -->
         <section id="achievements" class="page-panel">
-            <h2 class="page-title">Elite Honors</h2>
-            <p class="section-subtitle">National milestones and accredited competitive rankings.</p>
+            <div class="section-title-wrap">
+                <span class="section-eyebrow">Recognition</span>
+                <h2 class="page-title">Honors & Achievements</h2>
+                <p class="section-subtitle">Competitions, leadership milestones, and academic awards.</p>
+            </div>
+            
             <div class="portfolio-grid">
                 <div class="institution-card text-featured">
                     <div class="inst-meta">
@@ -121,215 +250,305 @@
                         <span class="year-pill">2025</span>
                     </div>
                     <p class="location-text">International Space Station (ISS)</p>
-                    <p class="academy-text">Co-developed autonomous coordinate logic matrices executed on live satellite platforms under the supervision of astronaut Dr. Don Pettit.</p>
+                    <p class="academy-text">Co-programmed autonomous navigation algorithms in C++ deployed directly onto Astrobee robotic satellites inside the ISS, tested and broadcast live with NASA astronaut Dr. Don Pettit.</p>
                 </div>
+
                 <div class="institution-card">
                     <div class="inst-meta">
-                        <h3>National Honor Society</h3>
-                        <span class="year-pill">Leadership</span>
+                        <h3>Kaggle & Google 5-Day Intensive AI Badge</h3>
+                        <span class="year-pill">2026</span>
                     </div>
-                    <p class="location-text">Vice President</p>
-                    <p class="academy-text">Elected executive leader helping drive technical, programmatic, and peer guidance actions across academic groups.</p>
+                    <p class="location-text">Google & Kaggle Capstone</p>
+                    <p class="academy-text">Earned official course badge for building "DIY Partfinder," an agentic AI recommender that reasons across mechanical and electrical constraints to generate DIY build guides.</p>
                 </div>
+
                 <div class="institution-card">
                     <div class="inst-meta">
-                        <h3>High School Honor Roll</h3>
-                        <span class="year-pill">Academic Distinction</span>
+                        <h3>NJ FBLA Cybersecurity — 8th Place in State</h3>
+                        <span class="year-pill">2025–2026</span>
                     </div>
-                    <p class="location-text">9th Grade & 11th Grade</p>
-                    <p class="academy-text">Recognized continuously for maintaining absolute top tier performance metrics within rigorous course syllabi thresholds.</p>
+                    <p class="location-text">State Leadership Conference</p>
+                    <p class="academy-text">Earned top 8 standing across New Jersey after competing in network defense, encryption methods, cyber ethics, and vulnerability analysis.</p>
                 </div>
-                <div class="institution-card">
-                    <div class="inst-meta">
-                        <h3>Applied Engineering Pathway</h3>
-                        <span class="year-pill">Academy Member</span>
-                    </div>
-                    <p class="location-text">Varsity Computer Science & Applied Engineering Academy</p>
-                    <p class="academy-text">Selected to enter a high-performance track focusing heavily on robust programmatic system integration controls.</p>
-                </div>
-                <div class="institution-card">
-                    <div class="inst-meta">
-                        <h3>Video Production Award</h3>
-                        <span class="year-pill">Institutional Honor</span>
-                    </div>
-                    <p class="location-text">Voorhees High School</p>
-                    <p class="academy-text">Conferred the premier technical media honor by administration for excellence in creative broadcasting layout systems.</p>
-                </div>
-                <div class="institution-card">
-                    <div class="inst-meta">
-                        <h3>8th Place State Finalist</h3>
-                        <span class="year-pill">2025-2026</span>
-                    </div>
-                    <p class="location-text">NJ FBLA Cybersecurity</p>
-                    <p class="academy-text">Tested top tier within competitive regions for network infrastructure protection controls, advanced cryptography, and defense architecture systems.</p>
-                </div>
+
                 <div class="institution-card">
                     <div class="inst-meta">
                         <h3>National Recognition Award</h3>
                         <span class="year-pill">2025</span>
                     </div>
                     <p class="location-text">College Board</p>
-                    <p class="academy-text">Conferred the Rural and Small-Town Academic Distinction and Excellence Award based on standardized testing benchmarks.</p>
+                    <p class="academy-text">Awarded the Rural and Small Town National Recognition Award by College Board for outstanding academic performance on the PSAT/NMSQT.</p>
+                </div>
+
+                <div class="institution-card">
+                    <div class="inst-meta">
+                        <h3>National Honor Society — Vice President</h3>
+                        <span class="year-pill">Leadership</span>
+                    </div>
+                    <p class="location-text">Voorhees High School Chapter</p>
+                    <p class="academy-text">Elected Vice President to organize school-wide peer tutoring programs, run chapter meetings, and coordinate service initiatives across the student body.</p>
+                </div>
+
+                <div class="institution-card">
+                    <div class="inst-meta">
+                        <h3>Video Production Excellence Award</h3>
+                        <span class="year-pill">2026</span>
+                    </div>
+                    <p class="location-text">Voorhees High School</p>
+                    <p class="academy-text">Awarded our high school's top media honor by faculty and administration for excellence in directing school broadcasts, filming graduation, live-stream production, and video editing.</p>
+                </div>
+
+                <div class="institution-card">
+                    <div class="inst-meta">
+                        <h3>PSAT 11 Commended Scholar</h3>
+                        <span class="year-pill">2026</span>
+                    </div>
+                    <p class="location-text">National Merit Scholarship Program</p>
+                    <p class="academy-text">Recognized as a Commended Scholar with a 1440 PSAT 11 score, placing in the top 1% nationwide among 1.5 million entrants.</p>
+                </div>
+
+                <div class="institution-card">
+                    <div class="inst-meta">
+                        <h3>Applied Engineering Pathway</h3>
+                        <span class="year-pill">2023–2027</span>
+                    </div>
+                    <p class="location-text">Varsity CS & Applied Engineering</p>
+                    <p class="academy-text">Selected into our district's competitive 4-year specialized STEM track focusing on embedded electronics, robotics integration, and algorithmic design.</p>
                 </div>
             </div>
         </section>
 
+        <!-- ================= SERVICE SECTION ================= -->
         <section id="service" class="page-panel">
-            <h2 class="page-title">Volunteer Service</h2>
-            <p class="section-subtitle">Community engineering, mentorship, and philanthropic leadership contributions.</p>
+            <div class="section-title-wrap">
+                <span class="section-eyebrow">Giving Back</span>
+                <h2 class="page-title">Community & Volunteering</h2>
+                <p class="section-subtitle">Youth mentorship, sports coaching, and community service.</p>
+            </div>
+            
             <div class="portfolio-grid">
                 <div class="institution-card">
                     <div class="inst-meta">
                         <h3>Hunterdon Art Museum Summer Camp</h3>
-                        <span class="year-pill">77 Hours</span>
+                        <span class="year-pill service-hours">81 Hours</span>
                     </div>
-                    <p class="location-text">Camp Assistant & Facilitator</p>
-                    <p class="academy-text">Managed developmental operational logistics and coordinated student activities throughout the structured summer programming matrix.</p>
+                    <p class="location-text">Camp Assistant & Teacher Assistant</p>
+                    <p class="academy-text">Dedicated 81 leadership hours assisting summer art camps, guiding elementary students through creative hands-on projects, managing daily classroom operations, and keeping campers engaged.</p>
                 </div>
+
                 <div class="institution-card">
                     <div class="inst-meta">
-                        <h3>Teen Tennis Coach</h3>
-                        <span class="year-pill">12 Hours</span>
+                        <h3>Temple Volunteer</h3>
+                        <span class="year-pill service-hours">21 Hours</span>
+                    </div>
+                    <p class="location-text">Cultural & Community Engagement</p>
+                    <p class="academy-text">Volunteered 21 hours supporting cultural assemblies, organizing community gatherings, and assisting in event logistics and meal distributions.</p>
+                </div>
+
+                <div class="institution-card">
+                    <div class="inst-meta">
+                        <h3>Youth Tennis Coach</h3>
+                        <span class="year-pill service-hours">14 Hours</span>
                     </div>
                     <p class="location-text">Athletic Mentor</p>
-                    <p class="academy-text">Provided technical coordination, physical instructions, and skill drill coaching matrices for aspiring tennis players under the 8th grade path joining the high school.</p>
+                    <p class="academy-text">Coached rising 8th graders preparing for high school tennis, running skill-building drills, teaching proper stroke mechanics, footwork, and encouraging positive sportsmanship.</p>
                 </div>
+
                 <div class="institution-card">
                     <div class="inst-meta">
-                        <h3>Reading Buddies at Library</h3>
-                        <span class="year-pill">5 Hours</span>
+                        <h3>Library Reading Buddies</h3>
+                        <span class="year-pill service-hours">5 Hours</span>
                     </div>
                     <p class="location-text">Literacy Volunteer</p>
-                    <p class="academy-text">Engaged with emerging young readers to foster critical reading comprehension, pronunciation mechanics, and library layout literacy.</p>
-                </div>
-                <div class="institution-card">
-                    <div class="inst-meta">
-                        <h3>Starry Skies</h3>
-                        <span class="year-pill">3 Hours</span>
-                    </div>
-                    <p class="location-text">Program Contributor</p>
-                    <p class="academy-text">Dedicated foundational engagement hours assisting educational assembly events regarding astrophysics and cosmological frameworks.</p>
+                    <p class="academy-text">Read one-on-one with elementary students every week at the local library, helping them build reading confidence, phonics skills, and an early excitement for books.</p>
                 </div>
             </div>
         </section>
 
+        <!-- ================= PROJECTS & EXPERIENCE SECTION ================= -->
         <section id="projects" class="page-panel">
-            <h2 class="page-title">Projects & Leadership</h2>
-            <p class="section-subtitle">Practical engineering frameworks and extracurricular commitments.</p>
+            <div class="section-title-wrap">
+                <span class="section-eyebrow">Engineering Builds & Leadership</span>
+                <h2 class="page-title">Projects & Experience</h2>
+                <p class="section-subtitle">Robotics builds, startup internship lead, and software tools.</p>
+            </div>
+            
             <div class="portfolio-grid">
+                <!-- Project 1: Sunflower -->
                 <div class="institution-card">
-                    <span class="project-category">Full-Stack Production</span>
-                    <h3>Voorhees Varsity Tennis Platform</h3>
-                    <p class="academy-text">Designed and structured the athletic division's flagship portal autonomously to organize stats pipelines and match notification mechanics.</p>
+                    <span class="project-category">Senior Engineering Capstone</span>
+                    <h3>Sunflower — Robotic Face-Tracking Monitor Arm</h3>
+                    <p class="academy-text">Engineered a motorized monitor arm that follows the user's face in real-time. Modeled custom hollow arm segments in FreeCAD with internal wiring passages, 3D printed with PETG-CF on a Bambu Lab A1 using a hardened steel nozzle, and integrated Google MediaPipe with a custom perspective deadband filter to eliminate motor jitter.</p>
+                    <div class="card-tag-row">
+                        <span class="tech-tag">FreeCAD</span>
+                        <span class="tech-tag">Bambu Lab A1</span>
+                        <span class="tech-tag">PETG-CF</span>
+                        <span class="tech-tag">MediaPipe</span>
+                        <span class="tech-tag">Arduino & Motors</span>
+                    </div>
                 </div>
+
+                <!-- Project 2: Techthought.org -->
                 <div class="institution-card">
-                    <span class="project-category">Algorithmic Competitive</span>
-                    <h3>Cornell Coding Competition</h3>
-                    <p class="academy-text">Engaged in real-time complex data structures and micro-optimization challenges against high school engineering cohorts.</p>
+                    <span class="project-category">Startup Internship · Team Lead</span>
+                    <h3>Techthought.org — Software & Electronics Intern Lead</h3>
+                    <p class="academy-text">Promoted to intern team lead for summer 2026. Built Python automation for news API posting (+100 social media followers in 2 weeks), created a GUI Agent, configured Linux OS & virtual machines, tested Raspberry Pi GPIO current draw under load, and implemented team sprint logs, calendars, and GitHub versioning.</p>
+                    <div class="card-tag-row">
+                        <span class="tech-tag">Python Automation</span>
+                        <span class="tech-tag">GUI Agent</span>
+                        <span class="tech-tag">Linux / VMs</span>
+                        <span class="tech-tag">Raspberry Pi GPIO</span>
+                        <span class="tech-tag">Team Leadership</span>
+                    </div>
                 </div>
+
+                <!-- Project 3: DIY Partfinder -->
                 <div class="institution-card">
-                    <span class="project-category">Diplomacy Forums</span>
-                    <h3>Model United Nations (150 Hours)</h3>
-                    <p class="academy-text">Served inside General Assembly delegations representing Saudi Arabia and argued high-stakes historical defense cases in simulated ICC legal sessions.</p>
+                    <span class="project-category">Agentic AI & Open Source</span>
+                    <h3>DIY Partfinder — Agentic AI Hardware Recommender</h3>
+                    <p class="academy-text">Built for Google's 5-Day Intensive AI Hackathon on Kaggle. Developed an agentic AI that takes any DIY hardware concept and reasons through mechanical constraints (weight, torque) and electrical factors (voltage, current) to output parts lists, specs, purchase links, and step-by-step build guides.</p>
+                    <div class="card-tag-row">
+                        <span class="tech-tag">Agentic AI</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Kaggle & Google Intensive</span>
+                        <span class="tech-tag">GitHub</span>
+                    </div>
                 </div>
+
+                <!-- Project 4: Tennis Platform -->
                 <div class="institution-card">
-                    <span class="project-category">Athletics & Engagement</span>
-                    <h3>Extracurricular Portfolios</h3>
-                    <p class="academy-text">JV Boys Tennis competitor, Dream Cricket Club participant, and active engineering design member inside the Technology Student Association (TSA).</p>
+                    <span class="project-category">Full-Stack Web App</span>
+                    <h3>Voorhees Tennis Team Portal</h3>
+                    <p class="academy-text">Designed and deployed a responsive web app for our boys' varsity tennis team to publish match schedules, track player stats, and deliver roster announcements.</p>
+                    <div class="card-tag-row">
+                        <span class="tech-tag">HTML/CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Athletics Web App</span>
+                    </div>
+                </div>
+
+                <!-- Project 5: Cornell Coding -->
+                <div class="institution-card">
+                    <span class="project-category">Competitive Programming</span>
+                    <h3>Cornell High School Coding Competition</h3>
+                    <p class="academy-text">Represented Voorhees High School in Cornell's annual competitive programming contest, tackling multi-step algorithmic optimization and data structure challenges under timed rounds.</p>
+                    <div class="card-tag-row">
+                        <span class="tech-tag">Algorithms</span>
+                        <span class="tech-tag">Data Structures</span>
+                        <span class="tech-tag">C++ / Python</span>
+                    </div>
+                </div>
+
+                <!-- Project 6: Video Club & Media -->
+                <div class="institution-card">
+                    <span class="project-category">Directing & Media Production</span>
+                    <h3>Voorhees Video Club President & Videographer</h3>
+                    <p class="academy-text">Direct our school's broadcast crew, filmed and livestreamed the 2026 graduation ceremony, produce morning school announcements, and recipient of the school Video Production Distinction Award.</p>
+                    <div class="card-tag-row">
+                        <span class="tech-tag">Videography</span>
+                        <span class="tech-tag">Live Broadcasting</span>
+                        <span class="tech-tag">Leadership</span>
+                    </div>
                 </div>
             </div>
         </section>
 
+        <!-- ================= BUILD LOG / JOURNEY SECTION ================= -->
         <section id="summer-journal" class="page-panel">
             <div class="section-header-flex">
-                <div>
-                    <h2 class="page-title">Venture With Me!</h2>
-                    <p class="section-subtitle">Live build records, and documentation tracking.</p>
+                <div class="section-title-wrap">
+                    <span class="section-eyebrow">Engineering Journal</span>
+                    <h2 class="page-title">Project Build Logs</h2>
+                    <p class="section-subtitle">Real-time build notes, hardware logs, and project breakdowns.</p>
                 </div>
-                <button id="admin-auth-btn" class="admin-btn-minimal">ADMIN LOG IN</button>
+                <button id="admin-auth-btn" class="admin-btn-minimal">Admin Sign In</button>
             </div>
 
+            <!-- Admin Control Panel (Visible when logged in) -->
             <div id="admin-control-panel" class="admin-panel" style="display: none;">
                 <div class="panel-block">
-                    <h3 id="project-form-title">Initialize New Research Node</h3>
+                    <h3 id="project-form-title">Add New Project</h3>
                     <form id="new-project-form">
                         <input type="hidden" id="edit-proj-id">
-                        <input type="text" id="proj-title" placeholder="Project Title" required>
-                        <input type="text" id="proj-short" placeholder="Short Bento Box Summary View Card Text" required>
-                        <textarea id="proj-long" rows="4" placeholder="Deep-dive Comprehensive Project Architecture Description..." required></textarea>
-                        <input type="url" id="proj-github" placeholder="GitHub Repository URL Link Address" required>
+                        <input type="text" id="proj-title" placeholder="Project Name (e.g., Sunflower Face-Tracking Arm)" required>
+                        <input type="text" id="proj-short" placeholder="Short Summary (1-2 sentences for card view)" required>
+                        <textarea id="proj-long" rows="4" placeholder="Detailed project description: what it does, hardware used, problems solved..." required></textarea>
+                        <input type="url" id="proj-github" placeholder="GitHub Repository URL (optional or link)" required>
                         <div style="display: flex; gap: 10px;">
-                            <button type="submit" id="proj-submit-btn" class="submit-btn" style="flex: 1;">Publish Node</button>
+                            <button type="submit" id="proj-submit-btn" class="submit-btn" style="flex: 1;">Save Project</button>
                             <button type="button" id="cancel-proj-edit" class="admin-btn-minimal" style="display:none;">Cancel</button>
                         </div>
                     </form>
                 </div>
                 
                 <div class="panel-block">
-                    <h3 id="log-form-title">Append Technical Journal Entry</h3>
+                    <h3 id="log-form-title">Add Build Log Entry</h3>
                     <form id="new-log-form">
                         <input type="hidden" id="edit-log-id">
                         <select id="log-project-select" required>
-                            <option value="">Select Target Destination Project Node...</option>
+                            <option value="">Select Project...</option>
                         </select>
-                        <input type="text" id="log-day" placeholder="e.g., Day 14: Antenna Sync Logic" required>
-                        <textarea id="log-content" rows="4" placeholder="Detailed technical logs, performance metrics, blocks resolved..." required></textarea>
+                        <input type="text" id="log-day" placeholder="e.g., Day 4: MediaPipe Z-Depth Deadband Filter" required>
+                        <textarea id="log-content" rows="4" placeholder="What did you work on today? Any bugs encountered, test results, or next steps?" required></textarea>
                         <div style="display: flex; gap: 10px;">
-                            <button type="submit" id="log-submit-btn" class="submit-btn" style="flex: 1;">Inject Entry</button>
+                            <button type="submit" id="log-submit-btn" class="submit-btn" style="flex: 1;">Save Entry</button>
                             <button type="button" id="cancel-log-edit" class="admin-btn-minimal" style="display:none;">Cancel</button>
                         </div>
                     </form>
                 </div>
-                <button id="admin-logout-btn" class="logout-link">Terminate Authentication Session</button>
+                <button id="admin-logout-btn" class="logout-link">Log Out of Admin</button>
             </div>
 
             <div id="summer-projects-grid" class="portfolio-grid">
-                <div class="loading-state">Initializing secure database channels...</div>
+                <div class="loading-state">Loading projects...</div>
             </div>
         </section>
 
     </main>
 
+    <!-- Detail Modal -->
     <div id="journal-modal" class="modal-overlay">
         <div class="modal-window">
-            <button class="modal-close-btn" id="close-modal-btn">&times;</button>
+            <button class="modal-close-btn" id="close-modal-btn" aria-label="Close modal">&times;</button>
             
             <div class="modal-hero">
-                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px;">
-                    <h1 id="modal-project-title">Project Node Name</h1>
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; gap: 15px;">
+                    <h1 id="modal-project-title">Project Name</h1>
                     <div id="modal-project-admin-actions" style="display:none; gap: 8px;">
-                        <button id="modal-edit-project" class="admin-btn-minimal" style="color: #2563eb;">Modify Node</button>
-                        <button id="modal-delete-project" class="admin-btn-minimal" style="color: #dc2626;">Purge Project</button>
+                        <button id="modal-edit-project" class="admin-btn-minimal" style="color: #2563eb;">Edit Project</button>
+                        <button id="modal-delete-project" class="admin-btn-minimal" style="color: #dc2626;">Delete Project</button>
                     </div>
                 </div>
-                <p id="modal-project-long">Comprehensive operational project specifications context block text string.</p>
-                <a href="#" id="modal-project-github" target="_blank" class="github-link-badge">Source Repository ↗</a>
+                <p id="modal-project-long">Project overview and details.</p>
+                <a href="#" id="modal-project-github" target="_blank" rel="noopener noreferrer" class="github-link-badge">View on GitHub ↗</a>
             </div>
 
             <div class="modal-workspace">
                 <div class="modal-timeline-sidebar" id="modal-timeline-nav"></div>
                 <div class="modal-log-viewer">
                     <div id="modal-log-admin-actions" style="display:none; gap: 8px; margin-bottom: 15px; border-bottom: 2px solid #000000; padding-bottom: 15px;">
-                        <button id="modal-edit-log" class="admin-btn-minimal" style="color: #2563eb;">Edit Log Text</button>
+                        <button id="modal-edit-log" class="admin-btn-minimal" style="color: #2563eb;">Edit Log</button>
                         <button id="modal-delete-log" class="admin-btn-minimal" style="color: #dc2626;">Delete Entry</button>
                     </div>
                     <div id="modal-log-viewer-content">
-                        <div class="empty-log-state">Select a tracking ledger milestone node on the sidebar framework axis.</div>
+                        <div class="empty-log-state">Select a log entry on the left to read notes.</div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- Admin Auth Modal -->
     <div id="auth-modal" class="modal-overlay">
         <div class="auth-card">
-            <button class="modal-close-btn" id="cancel-auth-btn">&times;</button>
+            <button class="modal-close-btn" id="cancel-auth-btn" aria-label="Close dialog">&times;</button>
             
-            <h3>Identity Authentication Challenge</h3>
+            <h3>Admin Sign In</h3>
+            <p class="auth-subtitle">Sign in to add or edit projects and daily build logs.</p>
             <form id="login-form">
-                <input type="email" id="auth-email" placeholder="Administrator Username Email" required>
-                <input type="password" id="auth-password" placeholder="System Access Security Keyphrase" required>
-                <button type="submit" class="submit-btn">Validate Token Credentials</button>
+                <input type="email" id="auth-email" placeholder="Email Address" required>
+                <input type="password" id="auth-password" placeholder="Password" required>
+                <button type="submit" class="submit-btn">Sign In</button>
             </form>
         </div>
     </div>
